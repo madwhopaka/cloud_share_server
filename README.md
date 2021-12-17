@@ -15,13 +15,12 @@ If you are planning to fork this or run this :
 Read it here: "https://www.mongodb.com/blog/post/quick-start-nodejs-mongodb-how-to-get-connected-to-your-database".
 5.What this server does is acts as a custom API : 
               There are 3 routes : 
-              1. /api/files which takes in a POST request with a file that the user wants to share, and stores and saves it on the server as well as the database.
+              i. /api/files which takes in a POST request with a file that the user wants to share, and stores and saves it on the server as well as the database.
                  It assigns the file with uuid, and generates link for the file (with the uuid included) on the server and sends it to the frontend as response.
-              2. /files/:uuid , this is a dynamic route with GET request, which takes in the uuid from the url link , checks if file with that uuid is available on the server, renders the download page if no error. 
+              ii. /files/:uuid , this is a dynamic route with GET request, which takes in the uuid from the url link , checks if file with that uuid is available on the server, renders the download page if no error. 
                  You'll have the download button in the download page which gives you url link to the file on ther server for download.
-              3. /files/download/:uuid this is another dynamic route with GET request, which also takes in the uuid from the url params, checks if the file is there on the server,
-                 if there it sends as response and downloads it for the users.
-              4. /api/files/send with POST request, takes the uuid of the file, the sender and recipent's email ids and sends an email to the recipient using nodemailer and sendinblue as the smtp host. 
+              iii. /files/download/:uuid this is another dynamic route with GET request, which also takes in the uuid from the url params, checks if the file is there on the server, if there it sends as response and downloads it for the users.
+              iv. /api/files/send with POST request, takes the uuid of the file, the sender and recipent's email ids and sends an email to the recipient using nodemailer and sendinblue as the smtp host. 
                  To make this route work : Create an account on sendinblue, go to SMTP from the menu, fill in the credentials cited on the SMTP tab in the .env file.
 
 I hope this helped. If you have any doubts, you can mail me at madhupaka11@gmail.com. 
