@@ -12,7 +12,7 @@ router.get('/:uuid', async (req,res)=> {
     console.log(file)
     
 
-    const filePath = `${__dirname}/../${file.path}`;
+    const filePath = `${file.path}`;
     console.log(filePath) ; 
     res.download(filePath) ; 
     
