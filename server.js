@@ -19,6 +19,9 @@ app.set('view engine', 'ejs');
 app.use('/api/files', files.router); 
 app.use('/files',show.router);
 app.use('/files/download', download.router);
+app.get('/', (req,res) => {
+    return res.send(<h1>Welcome to the backend server Cloud share : Check out the creators github account : github.com/madwhopaka</h1>); 
+}); 
 
 
 
