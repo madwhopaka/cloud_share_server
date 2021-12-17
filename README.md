@@ -16,7 +16,6 @@ Read it here: "https://www.mongodb.com/blog/post/quick-start-nodejs-mongodb-how-
 5. What this server does is acts as a custom API : 
 
 
-There are 3 routes : 
               1. /api/files which takes in a POST request with a file that the user wants to share, and stores and saves it on the server as well as the database.
                  It assigns the file with uuid, and generates link for the file (with the uuid included) on the server and sends it to the frontend as response.
               2. /files/:uuid , this is a dynamic route with GET request, which takes in the uuid from the url link , checks if file with that uuid is available on the server, renders the download page if no error. 
