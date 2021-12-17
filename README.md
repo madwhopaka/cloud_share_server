@@ -13,11 +13,11 @@ If you are planning to fork this or run this :
             You'll have the .env file in the root folder which has some environment variable which you need to fill in such as APP_BASE_URL, then some credentials for the modemailer host, auth ,etc.  
 4. Note this is just the backend server for a file sharing website, also I have used MONGO DB for database. So you will have to configure your database and connect it.
 Read it here: "https://www.mongodb.com/blog/post/quick-start-nodejs-mongodb-how-to-get-connected-to-your-database".
-What this server does is acts as a custom API : 
+5. What this server does is acts as a custom API : 
 
 
 There are 3 routes : 
-              1.. /api/files which takes in a POST request with a file that the user wants to share, and stores and saves it on the server as well as the database.
+              1. /api/files which takes in a POST request with a file that the user wants to share, and stores and saves it on the server as well as the database.
                  It assigns the file with uuid, and generates link for the file (with the uuid included) on the server and sends it to the frontend as response.
               2. /files/:uuid , this is a dynamic route with GET request, which takes in the uuid from the url link , checks if file with that uuid is available on the server, renders the download page if no error. 
                  You'll have the download button in the download page which gives you url link to the file on ther server for download.
