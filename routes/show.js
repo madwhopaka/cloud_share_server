@@ -17,6 +17,7 @@ router.get('/:uuid', async (req,res)=> {
            return res.render("download", {error: "Humare paas nahi hai voh file"}); 
        }
        else {
+        console.log(`${process.env.BASE_APP_URL}/files/download/${fyl.uuid}`); 
         return  res.render('download', {
             uuid : fyl.uuid, 
             fileSize: fyl.size, 
