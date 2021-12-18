@@ -4,12 +4,15 @@ import files from './routes/files.js' ;
 import show from './routes/show.js' ; 
 import download from './routes/download.js' ; 
 import path from 'path';
+import cors from 'cors'; 
 
 
-
+const corsOptions  = {
+    origin: process.env.ALLOWED_CLIENTS.split(',')
+}
 
 const app  = express() ; 
-
+app.use(cors(corsOptions));
 connectDb() ;
 const __dirname = path.resolve();
 app.use(express.static('public')) ;
