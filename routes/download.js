@@ -12,12 +12,13 @@ router.get('/:uuid', async (req,res)=> {
     console.log(file)
     var __dirname = path.resolve() ; 
     const filePath = `./${file.path}`;
-    console.log(filePath) ; 
-    res.download(filePath) ; 
-    
-    res.download(filePath, file.filename, (err)=>{console.log(`The error is : ${err}`)}) ; 
-    
-
+    console.log(filePath) ;
+   
+    if(pathUrl !== '/') {
+        res.download(filePath, file.filename, (err)=>{console.log(`The error is : ${err}`)}) ; 
+   } else {
+       next();
+   }
 })
 
 export default {router}
