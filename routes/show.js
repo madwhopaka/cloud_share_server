@@ -22,7 +22,7 @@ router.get('/:uuid', async (req,res)=> {
             uuid : fyl.uuid, 
             fileSize: fyl.size, 
             fileName : fyl.filename, 
-            download : `/download/${fyl.uuid}`
+            download : `files/download/${fyl.uuid}`
         })
        }
    }
