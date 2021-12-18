@@ -11,7 +11,7 @@ router.get('/:uuid', async (req,res)=> {
     if(!file) return res.render('download', {error: "Link expire ho gya"});
     console.log(file)
     var __dirname = path.resolve() ; 
-    const filePath = `app/${file.path}`;
+    const filePath = `/${file.path}`;
     console.log(filePath) ; 
     res.download(filePath) ; 
     
