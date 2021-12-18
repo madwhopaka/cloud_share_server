@@ -15,7 +15,7 @@ router.get('/:uuid', async (req,res)=> {
     console.log(filePath) ; 
     res.download(filePath) ; 
     
-    res.download(filePath, file.filename, (err)=>{console.log(err)}) ; 
+    res.download(filePath, file.filename, (err)=>{console.log(`The error is : ${err}`)}) ; 
     
 
 })
