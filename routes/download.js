@@ -4,8 +4,8 @@ import path from 'path' ;
 
 const router = express.Router() ; 
 
-router.get('/:uuid', async (req,res)=> {
-
+router.get('/:uuid', async (req,res,next)=> {
+    var pathUrl = req.path;
     const file = await File.findOne({uuid: req.params.uuid});
 
     if(!file) return res.render('download', {error: "Link expire ho gya"});
