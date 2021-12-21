@@ -1,6 +1,8 @@
 :root {
   --main-bg-color:  #282C35; 
   --border-color: #fff44f70; 
+  --container-width: 420px ;
+
  
   }
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
@@ -42,7 +44,7 @@ section.download {
   background-image: linear-gradient(315deg, #ff4e00 0%, #ec9f05 74%); */
 
     background: #14AA84;
-    width: 430px;
+    width: var(--container-width) ;
     max-width: 90%;
     border-radius: 25px;
     box-shadow: 0px 20px 20px 0px #00000017;
@@ -99,8 +101,13 @@ background-image: linear-gradient(315deg, #f7b42c 0%, #fc575e 74%);
 
 
 @media and screen(max-width:500px) {
+  
+  :root {
+    --container-width:360p; 
+  }
+  
   section.download {
-    width: 360px ;
+    width: var(--container-width) ; 
   }
   
 }
